@@ -40,6 +40,8 @@ nav a {
   display: grid;
   -ms-grid-columns: (10vw)[3];
       grid-template-columns: repeat(3, 10vw);
+  -ms-grid-rows: (10vw)[3];
+      grid-template-rows: repeat(3, 10vw);
   grid-gap: 1vw;
   background-color: #323844;
   margin: 5em auto 0 auto;
