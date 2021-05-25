@@ -19,14 +19,6 @@ body {
   background-color: $color_1;
 }
 
-.blue {
-  position: relative;
-  color: white;
-  background-color: blue;
-  font-size: 8vw;
-  text-align: center;
-}
-
 nav {
   position: absolute;
   left: 0;
@@ -64,8 +56,19 @@ nav {
   width: 10vw;
   background-color: red;
   cursor: pointer;
+  color: white;
+  font-size: 8vw;
+  text-align: center;
 }
 
 .cell:hover {
   transform: scale(1.1);
+}
+
+.blue {
+  position: relative;
+  color: white;
+  background-color: blue;
+  font-size: 8vw;
+  text-align: center;
 }
