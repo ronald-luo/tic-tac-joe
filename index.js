@@ -51,7 +51,7 @@ function gameBoardOperator(id,currentPlayer) {
 
 function renderGame(id, current) {
     temp = document.getElementById(id)
-    temp.classList.toggle('red')
+    temp.classList.toggle('blue')
     temp.textContent = current
 }
 

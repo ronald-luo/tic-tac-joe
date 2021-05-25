@@ -19,6 +19,14 @@ body {
   background-color: $color_1;
 }
 
+.blue {
+  position: relative;
+  color: white;
+  background-color: blue;
+  font-size: 8vw;
+  text-align: center;
+}
+
 nav {
   position: absolute;
   left: 0;
@@ -44,7 +52,6 @@ nav {
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, 10vw);
-  grid-template-rows: repeat(3, 10vw);
   grid-gap: 1vw;
   background-color: $color_3;
   margin: 5em auto 0 auto;
@@ -61,12 +68,4 @@ nav {
 
 .cell:hover {
   transform: scale(1.1);
-}
-
-.blue {
-  position: relative;
-  color: white;
-  background-color: blue;
-  font-size: 8vw;
-  text-align: center;
 }
