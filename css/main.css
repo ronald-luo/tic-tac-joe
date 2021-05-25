@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Poppins&display=swap");
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #242831;
+}
+
+nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 4em;
+  background-color: #292e38;
+  padding: 0 4em 0 4em;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 4em 0 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.game-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (10vw)[3];
+      grid-template-columns: repeat(3, 10vw);
+  -ms-grid-rows: (10vw)[3];
+      grid-template-rows: repeat(3, 10vw);
+  grid-gap: 1vw;
+  background-color: #323844;
+  margin: 5em auto 0 auto;
+  padding: 5em 0 5em 0;
+  height: 80vh;
+}
+
+.cell {
+  height: 10vw;
+  width: 10vw;
+  background-color: red;
+  cursor: pointer;
+}
+
+.cell:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.blue {
+  position: relative;
+  color: white;
+  background-color: blue;
+  font-size: 8vw;
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */
