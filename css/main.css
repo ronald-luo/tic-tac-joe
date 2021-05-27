@@ -21,6 +21,10 @@ nav {
   padding: 0 4em 0 4em;
 }
 
+nav #rluo {
+  font-size: 30px;
+}
+
 nav ul li {
   list-style: none;
   display: inline-block;
@@ -38,37 +42,81 @@ nav a {
           justify-content: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (10vw)[3];
-      grid-template-columns: repeat(3, 10vw);
-  -ms-grid-rows: (10vw)[3];
-      grid-template-rows: repeat(3, 10vw);
+  -ms-grid-columns: (8vw)[3];
+      grid-template-columns: repeat(3, 8vw);
+  -ms-grid-rows: (8vw)[3];
+      grid-template-rows: repeat(3, 8vw);
   grid-gap: 1vw;
   background-color: #323844;
-  margin: 5em auto 0 auto;
+  margin: 8em auto 0 auto;
   padding: 5em 0 5em 0;
-  height: 80vh;
+  height: 75vh;
+  width: 60vw;
+}
+
+.game-container .title-container {
+  position: absolute;
+  color: white;
+  width: 60vw;
+  font-size: 2vw;
+  text-align: center;
+  z-index: 0;
+  bottom: 75vh;
+}
+
+@media (min-width: 840px) {
+  .game-container {
+    margin: 10em auto 0 auto;
+  }
 }
 
 .cell {
-  height: 10vw;
-  width: 10vw;
-  background-color: red;
+  height: 8vw;
+  width: 8vw;
+  background-color: #a91fb3;
   cursor: pointer;
   color: white;
-  font-size: 8vw;
-  text-align: center;
+  font-size: 5vh;
+}
+
+.cell p {
+  position: relative;
+  margin: 0 auto 200px auto;
+  padding-bottom: 100px;
+  -webkit-transform: translateY(3.5vh);
+          transform: translateY(3.5vh);
+  line-height: 0;
+}
+
+@media (min-width: 840px) {
+  .cell p {
+    -webkit-transform: translateY(7.25vh);
+            transform: translateY(7.25vh);
+  }
 }
 
 .cell:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  background-color: #dc27e9;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 1;
 }
 
-.blue {
+.clicked {
   position: relative;
   color: white;
-  background-color: blue;
+  background-color: #dc27e9;
   font-size: 8vw;
   text-align: center;
+}
+
+.move {
+  margin: 0;
+  color: #c5c5c5;
+  position: absolute;
+  font-size: 3vh;
+  font-family: "Lora", serif;
+  text-align: center;
+  width: 60vw;
 }
 /*# sourceMappingURL=main.css.map */

@@ -3,10 +3,18 @@
 $color_1: #242831;
 $color_2: #292e38;
 $color_3: #323844;
-$color_4: #bb23c7;
+$color_4: #a91fb3;
+$color_5: #dc27e9;
 $padding: 4em;
 $font1: "Poppins", sans-serif;
 $font2: "Lora", serif;
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
 
 *,
 *:before,
@@ -27,6 +35,9 @@ nav {
   height: $padding;
   background-color: $color_2;
   padding: 0 $padding 0 $padding;
+  #rluo {
+    font-size: 30px;
+  }
 
   ul li {
     list-style: none;
@@ -43,33 +54,67 @@ nav {
 .game-container {
   justify-content: center;
   display: grid;
-  grid-template-columns: repeat(3, 10vw);
-  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 8vw);
+  grid-template-rows: repeat(3, 8vw);
   grid-gap: 1vw;
   background-color: $color_3;
-  margin: 5em auto 0 auto;
+  margin: 8em auto 0 auto;
   padding: 5em 0 5em 0;
-  height: 80vh;
+  height: 75vh;
+  width: 60vw;
+  .title-container {
+    position: absolute;
+    color: white;
+    width: 60vw;
+    font-size: 2vw;
+    text-align: center;
+    z-index: 0;
+    bottom: 75vh;
+  }
+  @include desktop {
+    margin: 10em auto 0 auto;
+  }
 }
 
 .cell {
-  height: 10vw;
-  width: 10vw;
-  background-color: red;
+  height: 8vw;
+  width: 8vw;
+  background-color: $color_4;
   cursor: pointer;
   color: white;
-  font-size: 8vw;
-  text-align: center;
+  font-size: 5vh;
+  p {
+    position: relative;
+    margin: 0 auto 200px auto;
+    padding-bottom: 100px;
+    transform: translateY(3.5vh);
+    line-height: 0;
+    @include desktop {
+      transform: translateY(7.25vh);
+    }
+  }
 }
 
 .cell:hover {
-  transform: scale(1.1);
+  background-color: $color_5;
+  transform: scale(1.05);
+  z-index: 1;
 }
 
-.blue {
+.clicked {
   position: relative;
   color: white;
-  background-color: blue;
+  background-color: $color_5;
   font-size: 8vw;
   text-align: center;
+}
+
+.move {
+  margin: 0;
+  color: rgb(197, 197, 197);
+  position: absolute;
+  font-size: 3vh;
+  font-family: $font2;
+  text-align: center;
+  width: 60vw;
 }

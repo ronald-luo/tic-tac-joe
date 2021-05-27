@@ -23,8 +23,31 @@ function eventListenerAdder() {
             gameBoardOperator(e.target.id, current_player)
             renderGame(e.target.id, current_player)
             winChecker()
+
+            let x = document.querySelectorAll(".move")
+
+    
+            if (x.length >= 1) {
+                let y = document.getElementById("current_move")
+                let move
+                current_player === "X" ? move = "O": move = "X"
+                y.textContent = `${move} to move`
+            } else {
+                toMove(current_player)
+            }
         })
     })
+}
+
+function toMove (current_player) {
+    let container = document.getElementById("to-move")
+    current_player === "X" ? mover = "O" : mover = "X"
+    console.log(`${mover} to move`)
+    let move = document.createElement("h3")
+    move.setAttribute('id', "current_move")
+    move.classList.add("move")
+    move.textContent = `${mover} to move`
+    container.appendChild(move)
 }
 
 let playerOne = 'X'
@@ -46,13 +69,12 @@ function gameBoardOperator(id,currentPlayer) {
         gameBoard[id] = currentPlayer
         break
     }
-    console.log(gameBoard)
 }
 
 function renderGame(id, current) {
     temp = document.getElementById(id)
-    temp.classList.toggle('blue')
-    temp.textContent = current
+    temp.classList.toggle('clicked')
+    temp.innerHTML = `<p>${current}</p>`
 }
 
 function winChecker() {
