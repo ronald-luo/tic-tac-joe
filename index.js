@@ -74,7 +74,7 @@ function gameBoardOperator(id,currentPlayer) {
 function renderGame(id, current) {
     temp = document.getElementById(id)
     temp.classList.toggle('clicked')
-    temp.innerHTML = `<p>${current}</p>`
+    temp.textContent = current
 }
 
 function winChecker() {

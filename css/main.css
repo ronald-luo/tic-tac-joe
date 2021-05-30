@@ -28,12 +28,40 @@ nav #rluo {
 nav ul li {
   list-style: none;
   display: inline-block;
-  margin: 0 4em 0 0;
+  margin: 0 0.25em 0 0;
 }
 
 nav a {
   text-decoration: none;
   color: white;
+}
+
+@media (min-width: 840px) {
+  nav ul li {
+    margin: 0 4em 0 0;
+  }
+}
+
+.title-container {
+  position: relative;
+  margin: 15vh auto 0 auto;
+  top: 0;
+  color: white;
+  width: 60vw;
+  font-size: 3vw;
+  text-align: center;
+  z-index: 0;
+  bottom: 75vh;
+}
+
+.title-container .move {
+  margin: 0;
+  color: #c5c5c5;
+  position: relative;
+  font-size: 3vh;
+  font-family: "Lora", serif;
+  text-align: center;
+  width: 60vw;
 }
 
 .game-container {
@@ -48,75 +76,32 @@ nav a {
       grid-template-rows: repeat(3, 8vw);
   grid-gap: 1vw;
   background-color: #323844;
-  margin: 8em auto 0 auto;
-  padding: 5em 0 5em 0;
+  margin: 0 auto 0 auto;
+  padding: 10em 0 10em 0;
   height: 75vh;
   width: 60vw;
 }
 
-.game-container .title-container {
-  position: absolute;
-  color: white;
-  width: 60vw;
-  font-size: 2vw;
-  text-align: center;
-  z-index: 0;
-  bottom: 75vh;
-}
-
-@media (min-width: 840px) {
-  .game-container {
-    margin: 10em auto 0 auto;
-  }
-}
-
-.cell {
+.game-container .cell {
   height: 8vw;
   width: 8vw;
   background-color: #a91fb3;
   cursor: pointer;
   color: white;
-  font-size: 5vh;
 }
 
-.cell p {
-  position: relative;
-  margin: 0 auto 200px auto;
-  padding-bottom: 100px;
-  -webkit-transform: translateY(3.5vh);
-          transform: translateY(3.5vh);
-  line-height: 0;
-}
-
-@media (min-width: 840px) {
-  .cell p {
-    -webkit-transform: translateY(7.25vh);
-            transform: translateY(7.25vh);
-  }
-}
-
-.cell:hover {
+.game-container .cell:hover {
   background-color: #dc27e9;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   z-index: 1;
 }
 
-.clicked {
+.game-container .clicked {
   position: relative;
   color: white;
   background-color: #dc27e9;
-  font-size: 8vw;
+  font-size: 5.5vw;
   text-align: center;
-}
-
-.move {
-  margin: 0;
-  color: #c5c5c5;
-  position: absolute;
-  font-size: 3vh;
-  font-family: "Lora", serif;
-  text-align: center;
-  width: 60vw;
 }
 /*# sourceMappingURL=main.css.map */

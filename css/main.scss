@@ -42,12 +42,40 @@ nav {
   ul li {
     list-style: none;
     display: inline-block;
-    margin: 0 $padding 0 0;
+    margin: 0 0.25em 0 0;
   }
 
   a {
     text-decoration: none;
     color: white;
+  }
+
+  @include desktop {
+    ul li {
+      margin: 0 $padding 0 0;
+    }
+  }
+}
+
+.title-container {
+  position: relative;
+  margin: 15vh auto 0 auto;
+  top: 0;
+  color: white;
+  width: 60vw;
+  font-size: 3vw;
+  text-align: center;
+  z-index: 0;
+  bottom: 75vh;
+
+  .move {
+    margin: 0;
+    color: rgb(197, 197, 197);
+    position: relative;
+    font-size: 3vh;
+    font-family: $font2;
+    text-align: center;
+    width: 60vw;
   }
 }
 
@@ -58,63 +86,29 @@ nav {
   grid-template-rows: repeat(3, 8vw);
   grid-gap: 1vw;
   background-color: $color_3;
-  margin: 8em auto 0 auto;
-  padding: 5em 0 5em 0;
+  margin: 0 auto 0 auto;
+  padding: 10em 0 10em 0;
   height: 75vh;
   width: 60vw;
-  .title-container {
-    position: absolute;
+
+  .cell {
+    height: 8vw;
+    width: 8vw;
+    background-color: $color_4;
+    cursor: pointer;
     color: white;
-    width: 60vw;
-    font-size: 2vw;
-    text-align: center;
-    z-index: 0;
-    bottom: 75vh;
   }
-  @include desktop {
-    margin: 10em auto 0 auto;
+  .cell:hover {
+    background-color: $color_5;
+    transform: scale(1.05);
+    z-index: 1;
   }
-}
 
-.cell {
-  height: 8vw;
-  width: 8vw;
-  background-color: $color_4;
-  cursor: pointer;
-  color: white;
-  font-size: 5vh;
-  p {
+  .clicked {
     position: relative;
-    margin: 0 auto 200px auto;
-    padding-bottom: 100px;
-    transform: translateY(3.5vh);
-    line-height: 0;
-    @include desktop {
-      transform: translateY(7.25vh);
-    }
+    color: white;
+    background-color: $color_5;
+    font-size: 5.5vw;
+    text-align: center;
   }
-}
-
-.cell:hover {
-  background-color: $color_5;
-  transform: scale(1.05);
-  z-index: 1;
-}
-
-.clicked {
-  position: relative;
-  color: white;
-  background-color: $color_5;
-  font-size: 8vw;
-  text-align: center;
-}
-
-.move {
-  margin: 0;
-  color: rgb(197, 197, 197);
-  position: absolute;
-  font-size: 3vh;
-  font-family: $font2;
-  text-align: center;
-  width: 60vw;
 }
