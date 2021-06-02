@@ -88,6 +88,8 @@ nav a {
   background-color: #a91fb3;
   cursor: pointer;
   color: white;
+  font-size: 5.5vw;
+  text-align: center;
 }
 
 .game-container .cell:hover {

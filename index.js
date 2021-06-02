@@ -82,28 +82,32 @@ function winChecker() {
     
     if (gameBoard[0] !== 0 && gameBoard[0] === gameBoard[3] && gameBoard[0] === gameBoard[6]) { //h1
         console.log('hi there0')
-        alert(`${gameBoard[0]} wins`)
+        winAlert(gameBoard[0])
     } else if (gameBoard[1] !== 0 && gameBoard[1] === gameBoard[4] && gameBoard[1] === gameBoard[7]) { //h2
         console.log('hi there1')
-        alert(`${gameBoard[1]} wins`)
+        winAlert(gameBoard[1])
     } else if (gameBoard[2] !== 0 && gameBoard[2] === gameBoard[5] && gameBoard[2] === gameBoard[8]) { //h3
         console.log('hi there3')
-        alert(`${gameBoard[2]} wins`)
+        winAlert(gameBoard[2])
     } else if (gameBoard[0] !== 0 && gameBoard[0] === gameBoard[1] && gameBoard[0] === gameBoard[2]) { //v1
         console.log('hi there4')
-        alert(`${gameBoard[0]} wins`)
+        winAlert(gameBoard[0])
     } else if (gameBoard[3] !== 0 && gameBoard[3] === gameBoard[4] && gameBoard[3] === gameBoard[5]) { //v2
         console.log('hi there5')
-        alert(`${gameBoard[3]} wins`)
+        winAlert(gameBoard[3])
     } else if (gameBoard[6] !== 0 && gameBoard[6] === gameBoard[7] && gameBoard[6] === gameBoard[8]) { //v3
         console.log('hi there6')
-        alert(`${gameBoard[6]} wins`)
+        winAlert(gameBoard[6])
     } else if (gameBoard[4] !== 0 && gameBoard[0] === gameBoard[4] && gameBoard[0] === gameBoard[8]) { //d1
         console.log('hi there7')
-        alert(`${gameBoard[4]} wins`)
+        winAlert(gameBoard[4])
     } else if (gameBoard[2] !== 0 && gameBoard[2] === gameBoard[4] && gameBoard[2] === gameBoard[6]) { //d2
         console.log('hi there8')
-        alert(`${gameBoard[2]} wins`)
+        winAlert(gameBoard[2])
     }
-    
+}
+
+function winAlert(player) {
+    alert(`${player} wins!`);
+    location.reload();
 }
